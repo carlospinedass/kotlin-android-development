@@ -9,6 +9,31 @@ fun main(args: Array<String>) {
     } else if (yourAge < 19) {
         println("You are a teenager")
     } else {
-        println("You are an adult")
+        if  (yourAge < 65) {
+            println("You are an adult")
+        } else {
+            print("You are a senior")
+        }
+
     }
+
+    print("Please enter 3 numbers : ")
+    var number1:Int = readLine()!!.toInt()
+    var number2:Int = readLine()!!.toInt()
+    var number3:Int = readLine()!!.toInt()
+
+    var largestNumber:Int = 0
+
+    if (number1 >= number2) {
+        if (number1 >= number3) {
+            largestNumber = number1
+        } else {
+            largestNumber = number3
+        }
+    } else {
+        if (number2 >= number3) {
+            largestNumber = number2
+        }
+    }
+    println("The largest number is $largestNumber")
 }
